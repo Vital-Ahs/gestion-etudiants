@@ -1,0 +1,295 @@
+/* ============================================
+   GESTION ÉTUDIANTS — Style global
+   Police : Syne (titres) + DM Sans (corps)
+   Palette : bleu marine profond + accent cyan
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+    --bg:        #0d1117;
+    --surface:   #161b22;
+    --surface2:  #1e2530;
+    --border:    #30363d;
+    --accent:    #00c9a7;
+    --accent2:   #0084ff;
+    --danger:    #ff5c5c;
+    --text:      #e6edf3;
+    --muted:     #8b949e;
+    --radius:    10px;
+    --shadow:    0 4px 24px rgba(0,0,0,.45);
+    --transition: .18s ease;
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ---- NAV ---- */
+nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+nav .brand {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+nav .brand span { color: var(--text); }
+
+/* ---- LAYOUT ---- */
+main {
+    max-width: 960px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+/* ---- PAGE TITLE ---- */
+.page-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 1.8rem;
+    color: var(--text);
+    position: relative;
+    padding-left: 1rem;
+}
+
+.page-title::before {
+    content: '';
+    position: absolute;
+    left: 0; top: .2em; bottom: .2em;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--accent), var(--accent2));
+    border-radius: 4px;
+}
+
+/* ---- CARD ---- */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+/* ---- FORM ---- */
+.form-group {
+    margin-bottom: 1.3rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: .45rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: .65rem 1rem;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: .95rem;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    outline: none;
+    appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 201, 167, .15);
+}
+
+.form-group input.error,
+.form-group select.error {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px rgba(255, 92, 92, .12);
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .65rem 1.4rem;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'DM Sans', sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #0d1117;
+}
+
+.btn-primary:hover { background: #00b494; transform: translateY(-1px); }
+
+.btn-secondary {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover { border-color: var(--accent2); color: var(--accent2); }
+
+.btn-danger {
+    background: transparent;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    padding: .35rem .85rem;
+    font-size: .82rem;
+}
+
+.btn-danger:hover { background: var(--danger); color: #fff; }
+
+.btn-edit {
+    background: transparent;
+    color: var(--accent2);
+    border: 1px solid var(--accent2);
+    padding: .35rem .85rem;
+    font-size: .82rem;
+}
+
+.btn-edit:hover { background: var(--accent2); color: #fff; }
+
+/* ---- TABLE ---- */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+}
+
+thead {
+    background: var(--surface2);
+}
+
+thead th {
+    padding: .85rem 1.1rem;
+    text-align: left;
+    font-family: 'Syne', sans-serif;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background var(--transition);
+}
+
+tbody tr:last-child { border-bottom: none; }
+
+tbody tr:hover { background: var(--surface2); }
+
+tbody td {
+    padding: .9rem 1.1rem;
+    color: var(--text);
+    vertical-align: middle;
+}
+
+.badge {
+    display: inline-block;
+    padding: .2rem .65rem;
+    background: rgba(0, 201, 167, .12);
+    color: var(--accent);
+    border-radius: 20px;
+    font-size: .78rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.actions { display: flex; gap: .5rem; }
+
+/* ---- ALERTS ---- */
+.alert {
+    padding: .85rem 1.1rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.4rem;
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.alert-success {
+    background: rgba(0, 201, 167, .1);
+    border: 1px solid rgba(0, 201, 167, .35);
+    color: var(--accent);
+}
+
+.alert-error {
+    background: rgba(255, 92, 92, .1);
+    border: 1px solid rgba(255, 92, 92, .35);
+    color: var(--danger);
+}
+
+/* ---- ERROR MESSAGE (JS) ---- */
+.field-error {
+    font-size: .78rem;
+    color: var(--danger);
+    margin-top: .3rem;
+    display: none;
+}
+
+.field-error.show { display: block; }
+
+/* ---- EMPTY STATE ---- */
+.empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--muted);
+}
+
+.empty-icon { font-size: 2.5rem; margin-bottom: .8rem; }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+    main { padding: 0 1rem; margin: 1.5rem auto; }
+    .card { padding: 1.3rem; }
+    nav { padding: 0 1rem; }
+}
