@@ -27,3 +27,4 @@ INSERT INTO filieres (nom) VALUES
     ('Réseaux et Télécommunications'),
     ('Intelligence Artificielle'),
     ('Cybersécurité');
+-- Mise à jour script
