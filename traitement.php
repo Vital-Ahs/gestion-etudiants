@@ -44,3 +44,4 @@ try {
     header('Location: index.php?error=db');
     exit;
 }
+// Traitement PHP
