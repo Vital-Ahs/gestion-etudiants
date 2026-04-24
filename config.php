@@ -23,3 +23,4 @@ try {
     // En production, ne jamais afficher le message d'erreur brut
     die('<p class="error">Erreur de connexion à la base de données. Veuillez contacter l\'administrateur.</p>');
 }
+// Config PDO
