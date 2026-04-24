@@ -94,3 +94,4 @@ document.querySelectorAll('input, select').forEach(function (el) {
         if (errEl) errEl.classList.remove('show');
     });
 });
+// Validation JS
