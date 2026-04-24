@@ -132,3 +132,4 @@ $filieres = $stmtFilieres->fetchAll();
 <script src="assets/js/script.js"></script>
 </body>
 </html>
+// Update logic
