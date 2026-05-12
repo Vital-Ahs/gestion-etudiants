@@ -2,13 +2,13 @@ Mini Projet de Gestion des Etudiants
 Structure du projet
 
 gestion-étudiants/
-      ├──index.php               ← Point d'entrée + navigation
-      ├── traitement.php      ← Thème, couleurs, constantes
+      ├──index.php 
+      ├── traitement.php      
       ├── update.php
-      ├── delete.php    ← Écran d'accueil
-      ├── config.php    ← Inscription
-      ├── database.sql     ← Connexion
-      └── assets/  ← Liste des camarades
+      ├── delete.php    
+      ├── config.php    
+      ├── database.sql     
+      └── assets/  
              ├── css
              |     └──style.css            
              └── js
