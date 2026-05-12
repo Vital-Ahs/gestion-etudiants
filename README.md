@@ -12,7 +12,7 @@ gestion-étudiants/
              ├── css
              |     └──style.css            
              └── js
-                 └── style.css
+                 └── script.js
 
 
    
